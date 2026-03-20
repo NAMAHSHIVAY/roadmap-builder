@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+
+{% block title %}Your {{ result.skill }} Roadmap — Nitin Builds{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="/static/css/roadmap.css">
+{% endblock %}
+
+{% block content %}
+
+    <!-- ROADMAP SUMMARY -->
+    <section class="roadmap-hero">
+        <div class="container">
+            <h1>Your personalised {{ result.skill }} roadmap</h1>
+            <span class="track-label">Level: {{ result.track }}</span>
+
+            <div class="summary-cards">
+                <div class="summary-card">
+                    <div class="summary-num">{{ result.total_hours }}</div>
+                    <div class="summary-label">Total hours</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-num">{{ result.weekly_hours }}</div>
+                    <div class="summary-label">Hours per week</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-num">{{ result.weeks_to_complete }}</div>
+                    <div class="summary-label">Weeks to complete</div>
+                </div>
+                <div class="summary-card highlight-card">
+                    <div class="summary-num">{{ result.completion_date }}</div>
+                    <div class="summary-label">You will be ready by</div>
+                </div>
+            </div>
+
+            <p class="roadmap-note">
+                Stay consistent with {{ result.weekly_hours }} hours per week
+                and you will complete {{ result.skill }} by
+                <strong>{{ result.completion_date }}</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- ROADMAP CONTENT -->
+    <section class="roadmap-content">
+        <div class="container">
+            <h2>Your week by week plan</h2>
+
+            <div class="progress-container">
+                <div class="progress-track">
+                    <div class="progress-fill" id="progress-bar"></div>
+                </div>
+                <div class="progress-text" id="progress-text">
+                    0 of 0 milestones completed
+                </div>
+            </div>
+
+            {% for item in result.milestones %}
+            <div class="milestone-card">
+                <div class="milestone-header">
+                    <div class="milestone-left">
+                        <div class="milestone-week">{{ item.week_label }}</div>
+                        <div class="milestone-title">{{ item.milestone.title }}</div>
+                        <div class="milestone-desc">{{ item.milestone.description }}</div>
+                    </div>
+                    <div class="milestone-hours">{{ item.milestone.base_hours }} hours</div>
+                </div>
+
+                <div class="milestone-body">
+                    <div class="topics-section">
+                        <div class="section-title">📚 Topics to cover</div>
+                        <ul class="topics-list">
+                            {% for topic in item.milestone.topics %}
+                            <li>{{ topic }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div class="resources-section">
+                        <div class="section-title">🎥 Free resources</div>
+                        <div class="resources-list">
+                            {% for resource in item.milestone.free_resources %}
+                            <a href="{{ resource.url }}"
+                               target="_blank"
+                               class="resource-card">
+                                <div class="resource-icon">
+                                    {% if resource.type == "youtube" %}▶
+                                    {% else %}📄{% endif %}
+                                </div>
+                                <div class="resource-info">
+                                    <div class="resource-title">{{ resource.title }}</div>
+                                    <div class="resource-meta">
+                                        {{ resource.language }} •
+                                        {{ resource.duration_hours }} hours
+                                    </div>
+                                </div>
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="project-section">
+                        <div class="section-title">🛠 Hands on project</div>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-title">
+                                    {{ item.milestone.project.title }}
+                                </div>
+                                <div class="project-meta">
+                                    <span class="project-difficulty
+                                        diff-{{ item.milestone.project.difficulty | lower }}">
+                                        {{ item.milestone.project.difficulty }}
+                                    </span>
+                                    <span class="project-time">
+                                        ~{{ item.milestone.project.estimated_hours }} hours
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="project-desc">
+                                {{ item.milestone.project.description }}
+                            </div>
+                            <a href="https://replit.com/new/python3"
+                               target="_blank"
+                               class="replit-btn">
+                                Code this project on Replit →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="roadmap-cta">
+        <div class="container">
+            <h2>Start your journey today</h2>
+            <p>Bookmark this page. Come back daily. Stay consistent.</p>
+            <div class="cta-buttons">
+                <a href="/" class="btn-primary">Build another roadmap</a>
+                <a href="https://instagram.com/nitinbuilds.official"
+                   target="_blank"
+                   class="btn-secondary">
+                    Follow on Instagram
+                </a>
+            </div>
+            <p class="share-note">
+                Share your start date in the comments —
+                accountability makes you 3x more likely to finish.
+            </p>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/roadmap.js"></script>
+{% endblock %}

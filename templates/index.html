@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}Nitin Builds — Free Personalised Learning Roadmaps{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="/static/css/home.css">
+{% endblock %}
+
+{% block content %}
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>Learn any skill with a roadmap built <span class="highlight">just for you</span></h1>
+            <p class="hero-sub">Tell us your current level and available time — we will give you a week by week plan with free Indian resources.</p>
+            <div class="features">
+                <div class="feature">✅ Free resources only</div>
+                <div class="feature">✅ Personalised timeline</div>
+                <div class="feature">✅ Indian YouTube creators</div>
+                <div class="feature">✅ Hands on projects</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILL SELECTION -->
+    <section class="skills">
+        <div class="container">
+            <h2>Choose a skill to start</h2>
+            <p class="section-sub">More skills coming every week</p>
+            <div class="skill-grid">
+
+                <a href="/assess/python" class="skill-card">
+                    <div class="skill-icon">🐍</div>
+                    <div class="skill-name">Python</div>
+                    <div class="skill-desc">Automation, data, web apps</div>
+                    <div class="skill-time">120 hours base</div>
+                </a>
+
+                <div class="skill-card coming-soon">
+                    <div class="skill-icon">🌐</div>
+                    <div class="skill-name">Web Development</div>
+                    <div class="skill-desc">HTML CSS JavaScript</div>
+                    <div class="skill-badge">Coming soon</div>
+                </div>
+
+                <div class="skill-card coming-soon">
+                    <div class="skill-icon">📊</div>
+                    <div class="skill-name">Data Analysis</div>
+                    <div class="skill-desc">Excel pandas visualisation</div>
+                    <div class="skill-badge">Coming soon</div>
+                </div>
+
+                <div class="skill-card coming-soon">
+                    <div class="skill-icon">🤖</div>
+                    <div class="skill-name">AI and ML</div>
+                    <div class="skill-desc">Machine learning basics</div>
+                    <div class="skill-badge">Coming soon</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how">
+        <div class="container">
+            <h2>How it works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-title">Pick your skill</div>
+                    <div class="step-desc">Choose what you want to learn from our growing library</div>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-title">Take the assessment</div>
+                    <div class="step-desc">We show you 3 code snippets to find your exact level</div>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-title">Set your schedule</div>
+                    <div class="step-desc">Tell us how many hours you can give on weekdays and weekends</div>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-title">Get your roadmap</div>
+                    <div class="step-desc">Receive a week by week plan with free resources and projects</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

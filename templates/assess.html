@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+
+{% block title %}Assessment — {{ skill | title }} | Nitin Builds{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="/static/css/assess.css">
+{% endblock %}
+
+{% block content %}
+
+    <section class="assessment">
+        <div class="container">
+
+            <div class="assess-header">
+                <h1>Let's find your {{ skill | title }} level</h1>
+                <p>Look at the code snippets below. Pick the last one you fully understand.</p>
+                <p class="assess-note">Be honest — the more accurate you are the better your roadmap will be.</p>
+            </div>
+
+            <form action="/schedule" method="POST" id="assess-form">
+                <input type="hidden" name="skill" value="{{ skill }}">
+                <input type="hidden" name="track" id="selected-track" value="">
+
+                <!-- I DONT UNDERSTAND ANY -->
+                <div class="no-understand"
+                     id="card-complete_beginner"
+                     onclick="selectTrack('complete_beginner')">
+                    <div class="code-check"></div>
+                    <div>
+                        <div class="no-understand-text">
+                            🌱 I don't understand any of the code below
+                        </div>
+                        <div class="no-understand-sub">
+                            Start from complete beginner
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CODE CARD 1 — BEGINNER -->
+                <div class="code-card"
+                     id="card-beginner"
+                     onclick="selectTrack('beginner')">
+                    <div class="code-card-header">
+                        <div class="code-level">Level 1 — Beginner</div>
+                        <div class="code-check"></div>
+                    </div>
+                    <pre class="code-block"><code>{{ assessment.beginner_code }}</code></pre>
+                    <div class="code-explanation">{{ assessment.beginner_explanation }}</div>
+                    <div class="code-question">I understand this ✓</div>
+                </div>
+
+                <!-- CODE CARD 2 — INTERMEDIATE -->
+                <div class="code-card"
+                     id="card-intermediate"
+                     onclick="selectTrack('intermediate')">
+                    <div class="code-card-header">
+                        <div class="code-level">Level 2 — Intermediate</div>
+                        <div class="code-check"></div>
+                    </div>
+                    <pre class="code-block"><code>{{ assessment.intermediate_code }}</code></pre>
+                    <div class="code-explanation">{{ assessment.intermediate_explanation }}</div>
+                    <div class="code-question">I understand this ✓</div>
+                </div>
+
+                <!-- CODE CARD 3 — ADVANCED -->
+                <div class="code-card"
+                     id="card-advanced"
+                     onclick="selectTrack('advanced')">
+                    <div class="code-card-header">
+                        <div class="code-level">Level 3 — Advanced</div>
+                        <div class="code-check"></div>
+                    </div>
+                    <pre class="code-block"><code>{{ assessment.advanced_code }}</code></pre>
+                    <div class="code-explanation">{{ assessment.advanced_explanation }}</div>
+                    <div class="code-question">I understand this ✓</div>
+                </div>
+
+                <!-- TIME INPUT -->
+                <div class="time-input" id="time-section" style="display:none;">
+                    <h2>How much time can you give?</h2>
+                    <p>Be realistic — consistency beats intensity.</p>
+
+                    <div class="time-grid">
+                        <div class="time-card">
+                            <div class="time-label">Monday to Friday</div>
+                            <div class="time-sub">Hours per day</div>
+                            <select name="weekday_hours" class="time-select">
+                                <option value="0.5">0.5 hours</option>
+                                <option value="1" selected>1 hour</option>
+                                <option value="1.5">1.5 hours</option>
+                                <option value="2">2 hours</option>
+                                <option value="3">3 hours</option>
+                                <option value="4">4 hours</option>
+                                <option value="5">5 hours</option>
+                                <option value="6">6 hours</option>
+                            </select>
+                        </div>
+                        <div class="time-card">
+                            <div class="time-label">Saturday</div>
+                            <div class="time-sub">Hours this day</div>
+                            <select name="saturday_hours" class="time-select">
+                                <option value="0">0 hours</option>
+                                <option value="1">1 hour</option>
+                                <option value="2" selected>2 hours</option>
+                                <option value="3">3 hours</option>
+                                <option value="4">4 hours</option>
+                                <option value="5">5 hours</option>
+                                <option value="6">6 hours</option>
+                                <option value="8">8 hours</option>
+                            </select>
+                        </div>
+                        <div class="time-card">
+                            <div class="time-label">Sunday</div>
+                            <div class="time-sub">Hours this day</div>
+                            <select name="sunday_hours" class="time-select">
+                                <option value="0">0 hours</option>
+                                <option value="1">1 hour</option>
+                                <option value="2" selected>2 hours</option>
+                                <option value="3">3 hours</option>
+                                <option value="4">4 hours</option>
+                                <option value="5">5 hours</option>
+                                <option value="6">6 hours</option>
+                                <option value="8">8 hours</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary" id="generate-btn">
+                        Generate My Roadmap →
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/assess.js"></script>
+{% endblock %}

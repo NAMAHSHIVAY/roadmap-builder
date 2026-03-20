@@ -1,0 +1,326 @@
+{
+    "skill": "Python",
+    "description": "Learn Python from your current level to building real projects",
+    "assessment": {
+        "beginner_code": "name = input('What is your name?')\nprint('Hello ' + name)",
+        "beginner_explanation": "Takes input from user and prints a greeting message",
+        "intermediate_code": "numbers = [1, 2, 3, 4, 5]\nsquares = [x**2 for x in numbers if x % 2 == 0]\nprint(squares)",
+        "intermediate_explanation": "Creates a list of squares of only even numbers using list comprehension",
+        "advanced_code": "class Stack:\n    def __init__(self):\n        self.items = []\n\n    def push(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop()\n\n    def is_empty(self):\n        return len(self.items) == 0",
+        "advanced_explanation": "A Stack data structure implemented using a Python class with push pop and empty check methods"
+    },
+    "tracks": {
+        "complete_beginner": {
+            "label": "Complete Beginner",
+            "description": "You are new to programming entirely",
+            "start_milestone": 1,
+            "total_base_hours": 120
+        },
+        "beginner": {
+            "label": "Beginner",
+            "description": "You understand basics but not intermediate concepts",
+            "start_milestone": 3,
+            "total_base_hours": 80
+        },
+        "intermediate": {
+            "label": "Intermediate",
+            "description": "You understand basics and some intermediate concepts",
+            "start_milestone": 6,
+            "total_base_hours": 40
+        },
+        "advanced": {
+            "label": "Advanced",
+            "description": "You understand most Python concepts",
+            "start_milestone": 8,
+            "total_base_hours": 20
+        }
+    },
+    "milestones": [
+        {
+            "id": 1,
+            "title": "Python Basics",
+            "description": "Variables, data types, operators, input and output",
+            "base_hours": 8,
+            "topics": [
+                "Variables and data types",
+                "Operators — arithmetic, comparison, logical",
+                "Input and output",
+                "Type conversion — int to string etc",
+                "Comments"
+            ],
+            "free_resources": [
+                {
+                    "title": "Python Tutorial for Beginners by CodeWithHarry",
+                    "url": "https://youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME",
+                    "type": "youtube",
+                    "duration_hours": 8,
+                    "language": "Hindi"
+                },
+                {
+                    "title": "Python Basics by Telusko",
+                    "url": "https://youtube.com/playlist?list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3",
+                    "type": "youtube",
+                    "duration_hours": 6,
+                    "language": "English"
+                }
+            ],
+            "project": {
+                "title": "Simple Calculator",
+                "description": "Take two numbers as input from user and perform addition subtraction multiplication and division. Show results clearly.",
+                "difficulty": "Easy",
+                "estimated_hours": 1
+            }
+        },
+        {
+            "id": 2,
+            "title": "Control Flow",
+            "description": "If else conditions and loops",
+            "base_hours": 8,
+            "topics": [
+                "If elif else conditions",
+                "For loops",
+                "While loops",
+                "Break continue pass",
+                "Nested loops"
+            ],
+            "free_resources": [
+                {
+                    "title": "Control Flow in Python by CodeWithHarry",
+                    "url": "https://youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME",
+                    "type": "youtube",
+                    "duration_hours": 4,
+                    "language": "Hindi"
+                },
+                {
+                    "title": "Python Control Flow by Corey Schafer",
+                    "url": "https://www.youtube.com/watch?v=DZwmZ8Usvnk",
+                    "type": "youtube",
+                    "duration_hours": 3,
+                    "language": "English"
+                }
+            ],
+            "project": {
+                "title": "Number Guessing Game",
+                "description": "Computer picks a random number between 1 and 100. User keeps guessing. Tool says too high or too low until user gets it right. Show number of attempts.",
+                "difficulty": "Easy",
+                "estimated_hours": 2
+            }
+        },
+        {
+            "id": 3,
+            "title": "Functions and Modules",
+            "description": "Write reusable code with functions and use built in modules",
+            "base_hours": 10,
+            "topics": [
+                "Defining functions",
+                "Arguments and return values",
+                "Default arguments",
+                "Keyword arguments",
+                "Lambda functions",
+                "Built in modules — math random datetime os"
+            ],
+            "free_resources": [
+                {
+                    "title": "Functions in Python by CodeWithHarry",
+                    "url": "https://youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME",
+                    "type": "youtube",
+                    "duration_hours": 5,
+                    "language": "Hindi"
+                },
+                {
+                    "title": "Python Functions by Corey Schafer",
+                    "url": "https://www.youtube.com/watch?v=9Os0o3wzS_I",
+                    "type": "youtube",
+                    "duration_hours": 3,
+                    "language": "English"
+                }
+            ],
+            "project": {
+                "title": "Unit Converter",
+                "description": "Convert km to miles celsius to fahrenheit kg to pounds and INR to USD. Each conversion should be its own function. User picks what to convert.",
+                "difficulty": "Easy",
+                "estimated_hours": 2
+            }
+        },
+        {
+            "id": 4,
+            "title": "Data Structures",
+            "description": "Lists tuples dictionaries and sets",
+            "base_hours": 12,
+            "topics": [
+                "Lists and list methods",
+                "Tuples and when to use them",
+                "Dictionaries — key value pairs",
+                "Sets and set operations",
+                "List comprehensions",
+                "Dictionary comprehensions"
+            ],
+            "free_resources": [
+                {
+                    "title": "Data Structures in Python by CodeWithHarry",
+                    "url": "https://youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME",
+                    "type": "youtube",
+                    "duration_hours": 6,
+                    "language": "Hindi"
+                },
+                {
+                    "title": "Python Lists by Corey Schafer",
+                    "url": "https://www.youtube.com/watch?v=W8KRzm-HUcc",
+                    "type": "youtube",
+                    "duration_hours": 4,
+                    "language": "English"
+                }
+            ],
+            "project": {
+                "title": "Contact Book",
+                "description": "Store names phone numbers and emails. Add new contact. Search by name. Delete contact. Show all contacts. Save to memory using dictionary.",
+                "difficulty": "Medium",
+                "estimated_hours": 3
+            }
+        },
+        {
+            "id": 5,
+            "title": "File Handling and Error Handling",
+            "description": "Read and write files and handle errors gracefully",
+            "base_hours": 8,
+            "topics": [
+                "Reading text files",
+                "Writing and appending to files",
+                "Working with CSV files",
+                "Try except finally",
+                "Raising custom exceptions",
+                "With statement"
+            ],
+            "free_resources": [
+                {
+                    "title": "File Handling in Python by CodeWithHarry",
+                    "url": "https://youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME",
+                    "type": "youtube",
+                    "duration_hours": 4,
+                    "language": "Hindi"
+                },
+                {
+                    "title": "Python File Objects by Corey Schafer",
+                    "url": "https://www.youtube.com/watch?v=Uh2ebFW8OYM",
+                    "type": "youtube",
+                    "duration_hours": 3,
+                    "language": "English"
+                }
+            ],
+            "project": {
+                "title": "Todo List App",
+                "description": "Add tasks mark them complete delete them and show all tasks. Save everything to a file so tasks persist when you restart the program.",
+                "difficulty": "Medium",
+                "estimated_hours": 3
+            }
+        },
+        {
+            "id": 6,
+            "title": "Object Oriented Programming",
+            "description": "Classes objects inheritance and encapsulation",
+            "base_hours": 15,
+            "topics": [
+                "Classes and objects",
+                "Constructor __init__",
+                "Instance and class attributes",
+                "Methods",
+                "Inheritance and super()",
+                "Encapsulation",
+                "Dunder methods __str__ __len__"
+            ],
+            "free_resources": [
+                {
+                    "title": "OOP in Python by CodeWithHarry",
+                    "url": "https://youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME",
+                    "type": "youtube",
+                    "duration_hours": 8,
+                    "language": "Hindi"
+                },
+                {
+                    "title": "OOP in Python by Corey Schafer",
+                    "url": "https://youtube.com/playlist?list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc",
+                    "type": "youtube",
+                    "duration_hours": 6,
+                    "language": "English"
+                }
+            ],
+            "project": {
+                "title": "Bank Account System",
+                "description": "Create a BankAccount class. Methods for deposit withdraw check balance and transaction history. Create multiple accounts. One account can transfer to another.",
+                "difficulty": "Medium",
+                "estimated_hours": 4
+            }
+        },
+        {
+            "id": 7,
+            "title": "Libraries and APIs",
+            "description": "Use external libraries and connect to real world APIs",
+            "base_hours": 12,
+            "topics": [
+                "Installing packages with pip",
+                "Requests library for HTTP",
+                "Working with JSON data",
+                "Calling external APIs",
+                "Environment variables for API keys",
+                "Basic web scraping with BeautifulSoup"
+            ],
+            "free_resources": [
+                {
+                    "title": "Python Requests Library by Corey Schafer",
+                    "url": "https://www.youtube.com/watch?v=tb8gHvYlCFs",
+                    "type": "youtube",
+                    "duration_hours": 3,
+                    "language": "English"
+                },
+                {
+                    "title": "Web Scraping with Python by CodeWithHarry",
+                    "url": "https://www.youtube.com/watch?v=QhD015WUMxE",
+                    "type": "youtube",
+                    "duration_hours": 4,
+                    "language": "Hindi"
+                }
+            ],
+            "project": {
+                "title": "Weather App",
+                "description": "Ask user for city name. Fetch real weather data from OpenWeatherMap free API. Show temperature humidity wind speed and conditions. Handle errors if city not found.",
+                "difficulty": "Medium",
+                "estimated_hours": 4
+            }
+        },
+        {
+            "id": 8,
+            "title": "Final Capstone Project",
+            "description": "Build a complete real world project and put it on GitHub",
+            "base_hours": 20,
+            "topics": [
+                "Project planning and breaking into tasks",
+                "Git basics — init add commit push",
+                "GitHub repository setup",
+                "Writing a good README",
+                "Basic deployment on Streamlit or Render"
+            ],
+            "free_resources": [
+                {
+                    "title": "Git and GitHub by CodeWithHarry",
+                    "url": "https://www.youtube.com/watch?v=gwWKnnCMQ5c",
+                    "type": "youtube",
+                    "duration_hours": 4,
+                    "language": "Hindi"
+                },
+                {
+                    "title": "Git Tutorial by Kunal Kushwaha",
+                    "url": "https://www.youtube.com/watch?v=apGV9Kg7ics",
+                    "type": "youtube",
+                    "duration_hours": 5,
+                    "language": "English"
+                }
+            ],
+            "project": {
+                "title": "Build Your Own Tool",
+                "description": "Pick any problem you face daily and solve it with Python. Could be a expense tracker, a reminder system, a file organiser, anything. Deploy it. Share the GitHub link.",
+                "difficulty": "Hard",
+                "estimated_hours": 10
+            }
+        }
+    ]
+}

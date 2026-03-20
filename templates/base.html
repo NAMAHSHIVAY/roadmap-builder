@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Nitin Builds{% endblock %}</title>
+
+    <!-- Immediate theme apply — prevents flash -->
+    <script>
+        // Apply theme to html element immediately
+        // body doesn't exist yet when head scripts run
+        (function() {
+            const saved = localStorage.getItem("theme");
+            if (saved === "light") {
+                document.documentElement.classList.add("light");
+            }
+        })();
+
+        function toggleTheme() {
+            const isLight = document.documentElement.classList.toggle("light");
+            localStorage.setItem("theme", isLight ? "light" : "dark");
+            updateThemeBtn(isLight);
+        }
+
+        function updateThemeBtn(isLight) {
+            const btn = document.getElementById("theme-btn");
+            if (btn) {
+                btn.textContent = isLight ? "🌙 Dark mode" : "☀️ Light mode";
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const isLight = document.documentElement.classList.contains("light");
+            updateThemeBtn(isLight);
+        });
+    </script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Base CSS — always loaded -->
+    <link rel="stylesheet" href="/static/css/base.css">
+
+    <!-- Page specific CSS -->
+    {% block styles %}{% endblock %}
+</head>
+<body>
+
+    <!-- HEADER — same on every page -->
+    <header>
+        <div class="container">
+            <a href="/" class="logo">🔨 Nitin Builds</a>
+            <div class="header-right">
+                <div class="tagline">Free personalised learning roadmaps</div>
+                <button class="theme-toggle"
+                        id="theme-btn"
+                        onclick="toggleTheme()">
+                    ☀️ Light mode
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE CONTENT — each page fills this -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- FOOTER — same on every page -->
+    <footer>
+        <div class="container">
+            <p>Built by
+                <a href="https://instagram.com/nitinbuilds.official"
+                   target="_blank">Nitin Builds</a>
+                — Part of the 100 day challenge
+            </p>
+            <p>Free forever. No login required.</p>
+        </div>
+    </footer>
+
+    <!-- Base JS — always loaded -->
+    <script src="/static/js/theme.js"></script>
+
+    <!-- Page specific JS -->
+    {% block scripts %}{% endblock %}
+
+</body>
+</html>

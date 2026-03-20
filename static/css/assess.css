@@ -1,0 +1,296 @@
+/* ─────────────────────────────────────────
+   ASSESSMENT PAGE
+───────────────────────────────────────── */
+
+.assessment {
+    padding: 60px 0 80px;
+}
+
+.assess-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.assess-header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+}
+
+.assess-header p {
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+.assess-note {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+/* ─────────────────────────────────────────
+   CODE CARDS
+───────────────────────────────────────── */
+
+.code-card {
+    background: var(--bg-glass);
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+    border: 2px solid var(--border-glass);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.code-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg,
+        transparent, var(--accent), transparent);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.code-card:hover {
+    border-color: rgba(245, 166, 35, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(245, 166, 35, 0.1);
+}
+
+.code-card:hover::before {
+    opacity: 1;
+}
+
+.code-card.selected {
+    border-color: var(--accent);
+    background: var(--bg-glass-selected);
+    box-shadow: 0 8px 32px var(--accent-glow);
+}
+
+.code-card.selected::before {
+    opacity: 1;
+}
+
+.code-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.code-level {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.code-check {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--border-glass);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    transition: var(--transition);
+}
+
+.code-card.selected .code-check {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #000;
+}
+
+.light .code-block {
+    background: #1e1e2e;
+    border: 1px solid var(--border-glass);
+    border-color: rgba(0, 0, 0, 0.15);
+    border-radius: var(--radius-sm);
+    padding: 18px;
+    font-family: "Fira Code", "Courier New", monospace;
+    font-size: 14px;
+    color: #a8d8a8;
+    overflow-x: auto;
+    margin-bottom: 14px;
+    white-space: pre;
+    line-height: 1.6;
+}
+
+.code-explanation {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
+.code-question {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* ─────────────────────────────────────────
+   NO UNDERSTAND OPTION
+───────────────────────────────────────── */
+
+.no-understand {
+    background: var(--bg-glass);
+    backdrop-filter: var(--blur);
+    border: 2px solid var(--border-glass);
+    border-radius: var(--radius);
+    padding: 20px 28px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: var(--shadow);
+}
+
+.no-understand:hover {
+    border-color: rgba(245, 166, 35, 0.4);
+    transform: translateY(-2px);
+}
+
+.no-understand.selected {
+    border-color: var(--accent);
+    background: var(--bg-glass-selected);
+    box-shadow: 0 8px 32px var(--accent-glow);
+}
+
+.no-understand-text {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.no-understand-sub {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* ─────────────────────────────────────────
+   TIME INPUT
+───────────────────────────────────────── */
+
+.time-input {
+    margin: 40px 0;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.time-input h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.time-input p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.time-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.time-card {
+    background: var(--bg-glass);
+    backdrop-filter: var(--blur);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius);
+    padding: 22px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.time-label {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.time-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+}
+
+.time-select {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    color: var(--text-primary);
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--transition);
+    appearance: none;
+}
+
+.time-select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+@media (max-width: 600px) {
+    .assess-header h1 {
+        font-size: 24px;
+    }
+}
+
+/* ─────────────────────────────────────────
+   LIGHT MODE OVERRIDES
+───────────────────────────────────────── */
+
+.light .code-block {
+    background: #1e1e2e;
+    color: #a8d8a8;
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+.light .no-understand {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.light .code-card {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.light .time-card {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.light .time-select {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--text-primary);
+}
