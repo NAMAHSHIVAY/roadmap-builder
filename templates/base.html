@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Nitin Builds{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/loading.css">
 
     <!-- Immediate theme apply — prevents flash -->
     <script>
@@ -46,6 +47,16 @@
 </head>
 <body>
 
+    <div id="loading-screen">
+    <div class="loading-hammer">🔨</div>
+    <div class="loading-logo">Nitin Builds</div>
+    <div class="loading-bar-track">
+        <div class="loading-bar-fill"></div>
+    </div>
+    <div class="loading-text">Building your roadmap...</div>
+    <div class="loading-subtext">First load may take up to 50 seconds</div>
+    </div>
+
     <!-- HEADER — same on every page -->
     <header>
         <div class="container">
@@ -83,6 +94,18 @@
 
     <!-- Page specific JS -->
     {% block scripts %}{% endblock %}
+
+    <script>
+    window.addEventListener("load", function() {
+        const screen = document.getElementById("loading-screen");
+        if (screen) {
+            screen.classList.add("hidden");
+            setTimeout(function() {
+                screen.style.display = "none";
+            }, 500);
+        }
+    });
+    </script>
 
 </body>
 </html>
