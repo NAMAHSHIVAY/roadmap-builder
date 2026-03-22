@@ -1,0 +1,319 @@
+{
+    "skill": "Web Development",
+    "description": "Learn web development from complete beginner to building real websites",
+    "assessment": {
+        "beginner_code": "<h1>Hello World</h1>\n<p>This is my first webpage</p>",
+        "beginner_explanation": "Basic HTML tags to display a heading and paragraph on a webpage",
+        "intermediate_code": ".container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    background-color: #f0f0f0;\n    padding: 20px;\n}",
+        "intermediate_explanation": "CSS flexbox layout to center content with background color and padding",
+        "advanced_code": "fetch('https://api.example.com/data')\n    .then(response => response.json())\n    .then(data => {\n        document.getElementById('result').innerHTML = data.name;\n    })\n    .catch(error => console.error(error));",
+        "advanced_explanation": "JavaScript fetch API to get data from an external API and display it on the page"
+    },
+    "tracks": {
+        "complete_beginner": {
+            "label": "Complete Beginner",
+            "description": "You are new to web development entirely",
+            "start_milestone": 1,
+            "total_base_hours": 120
+        },
+        "beginner": {
+            "label": "Beginner",
+            "description": "You know basic HTML but not CSS or JavaScript",
+            "start_milestone": 3,
+            "total_base_hours": 85
+        },
+        "intermediate": {
+            "label": "Intermediate",
+            "description": "You know HTML and CSS but not JavaScript",
+            "start_milestone": 5,
+            "total_base_hours": 50
+        },
+        "advanced": {
+            "label": "Advanced",
+            "description": "You know HTML CSS and basic JavaScript",
+            "start_milestone": 7,
+            "total_base_hours": 20
+        }
+    },
+    "milestones": [
+        {
+            "id": 1,
+            "title": "HTML Basics",
+            "description": "Structure of a webpage - tags, elements, attributes",
+            "base_hours": 8,
+            "topics": [
+                "What is HTML and how browsers work",
+                "Basic tags - h1 to h6, p, div, span",
+                "Links and images",
+                "Lists - ordered and unordered",
+                "Tables and forms",
+                "Semantic HTML - header, footer, nav, main"
+            ],
+            "free_resources": [
+                {
+                    "title": "HTML Full Course by CodeWithHarry",
+                    "url": "https://www.youtube.com/watch?v=BsDoLVMnmZs",
+                    "type": "youtube",
+                    "duration_hours": 3,
+                    "language": "Hindi"
+                },
+                {
+                    "title": "HTML Crash Course by Traversy Media",
+                    "url": "https://www.youtube.com/watch?v=UB1O30fR-EE",
+                    "type": "youtube",
+                    "duration_hours": 1,
+                    "language": "English"
+                }
+            ],
+            "project": {
+                "title": "Personal Profile Page",
+                "description": "Build a simple profile page with your name, photo, about section, skills list and contact links. Pure HTML only - no CSS yet.",
+                "difficulty": "Easy",
+                "estimated_hours": 2
+            }
+        },
+        {
+            "id": 2,
+            "title": "CSS Basics",
+            "description": "Style your webpages - colors, fonts, layouts",
+            "base_hours": 14,
+            "topics": [
+                "Selectors - class, id, element",
+                "Colors, fonts, text styling",
+                "Box model - margin, padding, border",
+                "Display - block, inline, inline-block",
+                "Position - static, relative, absolute, fixed",
+                "Basic responsive design with media queries"
+            ],
+            "free_resources": [
+                {
+                    "title": "CSS Full Course by CodeWithHarry",
+                    "url": "https://www.youtube.com/watch?v=Edsxf_NBFrw",
+                    "type": "youtube",
+                    "duration_hours": 8,
+                    "language": "Hindi"
+                },
+                {
+                    "title": "CSS Crash Course by Traversy Media",
+                    "url": "https://www.youtube.com/watch?v=yfoY53QXEnI",
+                    "type": "youtube",
+                    "duration_hours": 1.5,
+                    "language": "English"
+                }
+            ],
+            "project": {
+                "title": "Styled Profile Page",
+                "description": "Take your HTML profile page and add full CSS styling. Add colors, custom fonts, nice layout, hover effects on buttons and links.",
+                "difficulty": "Easy",
+                "estimated_hours": 3
+            }
+        },
+        {
+            "id": 3,
+            "title": "Flexbox and Grid",
+            "description": "Modern CSS layouts - build any layout you can imagine",
+            "base_hours": 8,
+            "topics": [
+                "Flexbox - flex-direction, justify-content, align-items",
+                "Flex wrap and flex grow",
+                "CSS Grid - rows, columns, grid-template",
+                "Grid areas and responsive grid",
+                "When to use Flexbox vs Grid"
+            ],
+            "free_resources": [
+                {
+                    "title": "CSS Flexbox in 20 minutes by Traversy Media",
+                    "url": "https://www.youtube.com/watch?v=JJSoEo8JSnc",
+                    "type": "youtube",
+                    "duration_hours": 0.5,
+                    "language": "English"
+                },
+                {
+                    "title": "CSS Grid Crash Course by Traversy Media",
+                    "url": "https://www.youtube.com/watch?v=0xMQfnTU6oo",
+                    "type": "youtube",
+                    "duration_hours": 0.5,
+                    "language": "English"
+                }
+            ],
+            "project": {
+                "title": "Responsive Landing Page",
+                "description": "Build a complete landing page for any product or service. Must work on mobile and desktop. Use flexbox for navbar and grid for features section.",
+                "difficulty": "Medium",
+                "estimated_hours": 4
+            }
+        },
+        {
+            "id": 4,
+            "title": "JavaScript Basics",
+            "description": "Make your webpages interactive and dynamic",
+            "base_hours": 12,
+            "topics": [
+                "Variables - let, const, var",
+                "Data types and operators",
+                "Functions and arrow functions",
+                "DOM manipulation - getElementById, querySelector",
+                "Events - onclick, onchange, addEventListener",
+                "Conditionals and loops"
+            ],
+            "free_resources": [
+                {
+                    "title": "JavaScript Full Course by CodeWithHarry",
+                    "url": "https://www.youtube.com/watch?v=hKB-YGF14SY",
+                    "type": "youtube",
+                    "duration_hours": 4,
+                    "language": "Hindi"
+                },
+                {
+                    "title": "JavaScript Crash Course by Traversy Media",
+                    "url": "https://www.youtube.com/watch?v=hdI2bqOjy3c",
+                    "type": "youtube",
+                    "duration_hours": 2,
+                    "language": "English"
+                }
+            ],
+            "project": {
+                "title": "Interactive Quiz App",
+                "description": "Build a 10 question quiz on any topic. Show one question at a time. Track score. Show result at end. Use DOM manipulation and events.",
+                "difficulty": "Medium",
+                "estimated_hours": 4
+            }
+        },
+        {
+            "id": 5,
+            "title": "Advanced JavaScript",
+            "description": "Arrays, objects, async programming and APIs - continue from JS basics",
+            "base_hours": 10,
+            "topics": [
+                "Arrays and array methods - map, filter, reduce",
+                "Objects and destructuring",
+                "Promises and async await",
+                "Fetch API - GET and POST requests",
+                "Local storage",
+                "Error handling"
+            ],
+            "free_resources": [
+                {
+                    "title": "JavaScript Full Course by CodeWithHarry",
+                    "url": "https://www.youtube.com/watch?v=hKB-YGF14SY",
+                    "type": "youtube",
+                    "duration_hours": 4,
+                    "language": "Hindi"
+                },
+                {
+                    "title": "Async JavaScript by Traversy Media",
+                    "url": "https://www.youtube.com/watch?v=PoRJizFvM7s",
+                    "type": "youtube",
+                    "duration_hours": 0.5,
+                    "language": "English"
+                }
+            ],
+            "project": {
+                "title": "Weather App",
+                "description": "Build a weather app using OpenWeatherMap free API. User enters city name. Fetch and display temperature, humidity, wind speed and conditions. Handle errors.",
+                "difficulty": "Medium",
+                "estimated_hours": 5
+            }
+        },
+        {
+            "id": 6,
+            "title": "Responsive Design and CSS Frameworks",
+            "description": "Build websites that work on all devices",
+            "base_hours": 10,
+            "topics": [
+                "Mobile first design approach",
+                "Media queries advanced",
+                "Bootstrap basics - grid, components, utilities",
+                "Tailwind CSS basics",
+                "CSS variables and custom properties",
+                "Dark mode implementation"
+            ],
+            "free_resources": [
+                {
+                    "title": "Bootstrap 5 by CodeWithHarry",
+                    "url": "https://www.youtube.com/watch?v=vpAJ0s5S2t0",
+                    "type": "youtube",
+                    "duration_hours": 2,
+                    "language": "Hindi"
+                },
+                {
+                    "title": "Tailwind CSS Crash Course by Traversy Media",
+                    "url": "https://www.youtube.com/watch?v=dFgzHOX84xQ",
+                    "type": "youtube",
+                    "duration_hours": 1.5,
+                    "language": "English"
+                }
+            ],
+            "project": {
+                "title": "E-commerce Product Page",
+                "description": "Build a fully responsive product page with image gallery, price, add to cart button, reviews section. Must look perfect on mobile and desktop.",
+                "difficulty": "Medium",
+                "estimated_hours": 5
+            }
+        },
+        {
+            "id": 7,
+            "title": "Git and Deployment",
+            "description": "Version control and putting your websites live",
+            "base_hours": 6,
+            "topics": [
+                "Git basics - init, add, commit, push",
+                "GitHub repository setup",
+                "GitHub Pages - free hosting",
+                "Netlify deployment",
+                "Custom domain setup",
+                "Writing a good README"
+            ],
+            "free_resources": [
+                {
+                    "title": "Git and GitHub by CodeWithHarry",
+                    "url": "https://www.youtube.com/watch?v=gwWKnnCMQ5c",
+                    "type": "youtube",
+                    "duration_hours": 1.5,
+                    "language": "Hindi"
+                },
+                {
+                    "title": "GitHub Pages Deploy by Traversy Media",
+                    "url": "https://www.youtube.com/watch?v=SKXkC4SqtRk",
+                    "type": "youtube",
+                    "duration_hours": 0.5,
+                    "language": "English"
+                }
+            ],
+            "project": {
+                "title": "Deploy Your Portfolio",
+                "description": "Create a personal portfolio website showcasing all your projects. Deploy it live on GitHub Pages or Netlify with a custom domain if possible.",
+                "difficulty": "Medium",
+                "estimated_hours": 5
+            }
+        },
+        {
+            "id": 8,
+            "title": "Final Capstone Project",
+            "description": "Build a complete frontend project and put it live",
+            "base_hours": 20,
+            "topics": [
+                "Project planning and wireframing",
+                "Component based thinking",
+                "Performance basics - image optimization, lazy loading",
+                "SEO basics - meta tags, semantic HTML",
+                "Accessibility basics"
+            ],
+            "free_resources": [
+                {
+                    "title": "Web Dev Capstone Guide by Traversy Media",
+                    "url": "https://www.youtube.com/watch?v=r_hYR53r61M",
+                    "type": "youtube",
+                    "duration_hours": 2,
+                    "language": "English"
+                }
+            ],
+            "project": {
+                "title": "Build a Complete Website",
+                "description": "Pick any real world idea - a restaurant website, a portfolio, a blog, a product landing page. Build it completely from scratch. Deploy it live. Share the link.",
+                "difficulty": "Hard",
+                "estimated_hours": 15
+            }
+        }
+    ]
+}

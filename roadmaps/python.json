@@ -14,25 +14,25 @@
             "label": "Complete Beginner",
             "description": "You are new to programming entirely",
             "start_milestone": 1,
-            "total_base_hours": 120
+            "total_base_hours": 71
         },
         "beginner": {
             "label": "Beginner",
             "description": "You understand basics but not intermediate concepts",
             "start_milestone": 3,
-            "total_base_hours": 80
+            "total_base_hours": 53
         },
         "intermediate": {
             "label": "Intermediate",
             "description": "You understand basics and some intermediate concepts",
             "start_milestone": 6,
-            "total_base_hours": 40
+            "total_base_hours": 33
         },
         "advanced": {
             "label": "Advanced",
             "description": "You understand most Python concepts",
             "start_milestone": 8,
-            "total_base_hours": 20
+            "total_base_hours": 15
         }
     },
     "milestones": [
@@ -40,27 +40,27 @@
             "id": 1,
             "title": "Python Basics",
             "description": "Variables, data types, operators, input and output",
-            "base_hours": 8,
+            "base_hours": 12,
             "topics": [
                 "Variables and data types",
-                "Operators — arithmetic, comparison, logical",
+                "Operators - arithmetic, comparison, logical",
                 "Input and output",
-                "Type conversion — int to string etc",
+                "Type conversion - int to string etc",
                 "Comments"
             ],
             "free_resources": [
                 {
-                    "title": "Python Tutorial for Beginners by CodeWithHarry",
+                    "title": "Python Complete Course by CodeWithHarry",
                     "url": "https://youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME",
                     "type": "youtube",
-                    "duration_hours": 8,
+                    "duration_hours": 34,
                     "language": "Hindi"
                 },
                 {
                     "title": "Python Basics by Telusko",
                     "url": "https://youtube.com/playlist?list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3",
                     "type": "youtube",
-                    "duration_hours": 6,
+                    "duration_hours": 17,
                     "language": "English"
                 }
             ],
@@ -75,7 +75,7 @@
             "id": 2,
             "title": "Control Flow",
             "description": "If else conditions and loops",
-            "base_hours": 8,
+            "base_hours": 6,
             "topics": [
                 "If elif else conditions",
                 "For loops",
@@ -85,17 +85,17 @@
             ],
             "free_resources": [
                 {
-                    "title": "Control Flow in Python by CodeWithHarry",
+                    "title": "Python Complete Course by CodeWithHarry",
                     "url": "https://youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME",
                     "type": "youtube",
-                    "duration_hours": 4,
+                    "duration_hours": 34,
                     "language": "Hindi"
                 },
                 {
                     "title": "Python Control Flow by Corey Schafer",
                     "url": "https://www.youtube.com/watch?v=DZwmZ8Usvnk",
                     "type": "youtube",
-                    "duration_hours": 3,
+                    "duration_hours": 0.5,
                     "language": "English"
                 }
             ],
@@ -110,28 +110,28 @@
             "id": 3,
             "title": "Functions and Modules",
             "description": "Write reusable code with functions and use built in modules",
-            "base_hours": 10,
+            "base_hours": 6,
             "topics": [
                 "Defining functions",
                 "Arguments and return values",
                 "Default arguments",
                 "Keyword arguments",
                 "Lambda functions",
-                "Built in modules — math random datetime os"
+                "Built in modules - math random datetime os"
             ],
             "free_resources": [
                 {
-                    "title": "Functions in Python by CodeWithHarry",
+                    "title": "Python Complete Course by CodeWithHarry",
                     "url": "https://youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME",
                     "type": "youtube",
-                    "duration_hours": 5,
+                    "duration_hours": 34,
                     "language": "Hindi"
                 },
                 {
                     "title": "Python Functions by Corey Schafer",
                     "url": "https://www.youtube.com/watch?v=9Os0o3wzS_I",
                     "type": "youtube",
-                    "duration_hours": 3,
+                    "duration_hours": 0.5,
                     "language": "English"
                 }
             ],
@@ -146,28 +146,28 @@
             "id": 4,
             "title": "Data Structures",
             "description": "Lists tuples dictionaries and sets",
-            "base_hours": 12,
+            "base_hours": 8,
             "topics": [
                 "Lists and list methods",
                 "Tuples and when to use them",
-                "Dictionaries — key value pairs",
+                "Dictionaries - key value pairs",
                 "Sets and set operations",
                 "List comprehensions",
                 "Dictionary comprehensions"
             ],
             "free_resources": [
                 {
-                    "title": "Data Structures in Python by CodeWithHarry",
+                    "title": "Python Complete Course by CodeWithHarry",
                     "url": "https://youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME",
                     "type": "youtube",
-                    "duration_hours": 6,
+                    "duration_hours": 34,
                     "language": "Hindi"
                 },
                 {
                     "title": "Python Lists by Corey Schafer",
                     "url": "https://www.youtube.com/watch?v=W8KRzm-HUcc",
                     "type": "youtube",
-                    "duration_hours": 4,
+                    "duration_hours": 0.5,
                     "language": "English"
                 }
             ],
@@ -182,7 +182,7 @@
             "id": 5,
             "title": "File Handling and Error Handling",
             "description": "Read and write files and handle errors gracefully",
-            "base_hours": 8,
+            "base_hours": 6,
             "topics": [
                 "Reading text files",
                 "Writing and appending to files",
@@ -193,17 +193,17 @@
             ],
             "free_resources": [
                 {
-                    "title": "File Handling in Python by CodeWithHarry",
+                    "title": "Python Complete Course by CodeWithHarry",
                     "url": "https://youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME",
                     "type": "youtube",
-                    "duration_hours": 4,
+                    "duration_hours": 34,
                     "language": "Hindi"
                 },
                 {
                     "title": "Python File Objects by Corey Schafer",
                     "url": "https://www.youtube.com/watch?v=Uh2ebFW8OYM",
                     "type": "youtube",
-                    "duration_hours": 3,
+                    "duration_hours": 0.5,
                     "language": "English"
                 }
             ],
@@ -218,7 +218,7 @@
             "id": 6,
             "title": "Object Oriented Programming",
             "description": "Classes objects inheritance and encapsulation",
-            "base_hours": 15,
+            "base_hours": 10,
             "topics": [
                 "Classes and objects",
                 "Constructor __init__",
@@ -230,17 +230,17 @@
             ],
             "free_resources": [
                 {
-                    "title": "OOP in Python by CodeWithHarry",
+                    "title": "Python Complete Course by CodeWithHarry",
                     "url": "https://youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME",
                     "type": "youtube",
-                    "duration_hours": 8,
+                    "duration_hours": 34,
                     "language": "Hindi"
                 },
                 {
                     "title": "OOP in Python by Corey Schafer",
                     "url": "https://youtube.com/playlist?list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc",
                     "type": "youtube",
-                    "duration_hours": 6,
+                    "duration_hours": 1.5,
                     "language": "English"
                 }
             ],
@@ -255,7 +255,7 @@
             "id": 7,
             "title": "Libraries and APIs",
             "description": "Use external libraries and connect to real world APIs",
-            "base_hours": 12,
+            "base_hours": 8,
             "topics": [
                 "Installing packages with pip",
                 "Requests library for HTTP",
@@ -269,14 +269,14 @@
                     "title": "Python Requests Library by Corey Schafer",
                     "url": "https://www.youtube.com/watch?v=tb8gHvYlCFs",
                     "type": "youtube",
-                    "duration_hours": 3,
+                    "duration_hours": 0.5,
                     "language": "English"
                 },
                 {
                     "title": "Web Scraping with Python by CodeWithHarry",
-                    "url": "https://www.youtube.com/watch?v=QhD015WUMxE",
+                    "url": "https://www.youtube.com/watch?v=1227R6KY8Ts",
                     "type": "youtube",
-                    "duration_hours": 4,
+                    "duration_hours": 0.75,
                     "language": "Hindi"
                 }
             ],
@@ -291,10 +291,10 @@
             "id": 8,
             "title": "Final Capstone Project",
             "description": "Build a complete real world project and put it on GitHub",
-            "base_hours": 20,
+            "base_hours": 15,
             "topics": [
                 "Project planning and breaking into tasks",
-                "Git basics — init add commit push",
+                "Git basics - init add commit push",
                 "GitHub repository setup",
                 "Writing a good README",
                 "Basic deployment on Streamlit or Render"
@@ -304,14 +304,14 @@
                     "title": "Git and GitHub by CodeWithHarry",
                     "url": "https://www.youtube.com/watch?v=gwWKnnCMQ5c",
                     "type": "youtube",
-                    "duration_hours": 4,
+                    "duration_hours": 1.25,
                     "language": "Hindi"
                 },
                 {
                     "title": "Git Tutorial by Kunal Kushwaha",
                     "url": "https://www.youtube.com/watch?v=apGV9Kg7ics",
                     "type": "youtube",
-                    "duration_hours": 5,
+                    "duration_hours": 1.25,
                     "language": "English"
                 }
             ],
