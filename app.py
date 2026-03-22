@@ -130,7 +130,53 @@ def schedule():
         sunday_hours
     )
 
-    return render_template("roadmap.html", result=result)
+    # Build shareable URL
+    share_url = (
+        f"/roadmap?skill={skill}&track={track}"
+        f"&weekday={weekday_hours}"
+        f"&saturday={saturday_hours}"
+        f"&sunday={sunday_hours}"
+    )
+
+    return render_template(
+        "roadmap.html",
+        result=result,
+        share_url=share_url
+    )
+
+
+@app.route("/roadmap", methods=["GET"])
+def roadmap_direct():
+    skill = request.args.get("skill", "python")
+    track = request.args.get("track", "complete_beginner")
+    weekday_hours = float(request.args.get("weekday", 1))
+    saturday_hours = float(request.args.get("saturday", 0))
+    sunday_hours = float(request.args.get("sunday", 0))
+
+    roadmap = load_roadmap(skill)
+    if not roadmap:
+        return "Skill not found", 404
+
+    result = calculate_roadmap(
+        roadmap,
+        track,
+        weekday_hours,
+        saturday_hours,
+        sunday_hours
+    )
+
+    share_url = (
+        f"/roadmap?skill={skill}&track={track}"
+        f"&weekday={weekday_hours}"
+        f"&saturday={saturday_hours}"
+        f"&sunday={sunday_hours}"
+    )
+
+    return render_template(
+        "roadmap.html",
+        result=result,
+        share_url=share_url
+    )
 
 
 # ─────────────────────────────────────────

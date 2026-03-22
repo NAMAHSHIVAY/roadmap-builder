@@ -486,3 +486,83 @@
 .light .summary-card {
     background: rgba(255, 255, 255, 0.8);
 }
+
+/* ─────────────────────────────────────────
+   SHARE SECTION
+───────────────────────────────────────── */
+
+.share-section {
+    padding: 40px 0;
+}
+
+.share-card {
+    background: var(--bg-glass);
+    backdrop-filter: var(--blur);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: var(--shadow);
+}
+
+.share-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.share-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.share-url-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-sm);
+    padding: 10px 16px;
+    flex-wrap: wrap;
+}
+
+.share-url-text {
+    font-size: 12px;
+    color: var(--accent);
+    font-family: "Fira Code", monospace;
+    word-break: break-all;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.copy-btn {
+    background: var(--accent);
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.copy-btn:hover {
+    opacity: 0.85;
+}
+
+.copy-success {
+    display: none;
+    font-size: 13px;
+    color: var(--success);
+    margin-top: 10px;
+}
+
+.light .share-url-box {
+    background: rgba(255, 255, 255, 0.8);
+}

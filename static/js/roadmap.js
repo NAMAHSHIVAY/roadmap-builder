@@ -74,3 +74,20 @@ function updateProgress() {
         text.textContent = completed + " of " + total + " milestones completed";
     }
 }
+
+// ─────────────────────────────────────────
+// COPY SHARE URL
+// ─────────────────────────────────────────
+
+function copyUrl() {
+    const url = document.getElementById("share-url").textContent.trim();
+    navigator.clipboard.writeText(url).then(function() {
+        const success = document.getElementById("copy-success");
+        if (success) {
+            success.style.display = "block";
+            setTimeout(function() {
+                success.style.display = "none";
+            }, 3000);
+        }
+    });
+}
