@@ -95,6 +95,9 @@ def calculate_roadmap(roadmap_data, track, weekday_hours, saturday_hours, sunday
 def index():
     return render_template("index.html")
 
+@app.route("/career")
+def career():
+    return render_template("career.html")
 
 @app.route("/assess/<skill>")
 def assess(skill):

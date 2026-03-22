@@ -224,3 +224,51 @@
         display: none;
     }
 }
+
+/* ── CAREER CTA ── */
+.career-cta-section {
+    padding: 0 0 60px;
+}
+
+.career-cta-card {
+    background: var(--bg-glass);
+    backdrop-filter: var(--blur);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    box-shadow: 0 8px 32px var(--accent-glow);
+    flex-wrap: wrap;
+}
+
+.career-cta-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.career-cta-title {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.career-cta-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.6;
+    max-width: 440px;
+}
+
+.career-cta-right {
+    font-size: 80px;
+    opacity: 0.6;
+}

@@ -1,0 +1,382 @@
+/* ─────────────────────────────────────────
+   CAREER FIT PAGE
+───────────────────────────────────────── */
+
+.career-hero {
+    padding: 60px 0 40px;
+    text-align: center;
+}
+
+.career-hero h1 {
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.career-hero h1 span {
+    color: var(--accent);
+}
+
+.career-hero p {
+    font-size: 16px;
+    color: var(--text-secondary);
+    max-width: 520px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.hero-stat {
+    background: var(--bg-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+/* ── PROGRESS ── */
+.progress-bar-wrap {
+    margin: 32px 0 8px;
+}
+
+.progress-track {
+    background: var(--bg-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: 10px;
+    height: 6px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), #ffcc44);
+    border-radius: 10px;
+    transition: width 0.4s ease;
+    box-shadow: 0 0 8px var(--accent-glow);
+    width: 0%;
+}
+
+.progress-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-align: right;
+}
+
+/* ── QUIZ ── */
+#quiz-section {
+    padding: 0 0 80px;
+}
+
+.question-card {
+    background: var(--bg-glass);
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius);
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow);
+    animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.question-dimension {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.question-num {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.question-text {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    letter-spacing: -0.3px;
+    line-height: 1.4;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option {
+    background: rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--border-glass);
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.option:hover {
+    border-color: rgba(245, 166, 35, 0.4);
+    background: rgba(245, 166, 35, 0.05);
+}
+
+.option.selected {
+    border-color: var(--accent);
+    background: var(--bg-glass-selected);
+}
+
+.option-letter {
+    width: 24px;
+    height: 24px;
+    background: var(--bg-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent);
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.option.selected .option-letter {
+    background: var(--accent);
+    color: #000;
+    border-color: var(--accent);
+}
+
+.option-text {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    padding-top: 2px;
+}
+
+.option.selected .option-text {
+    color: var(--text-primary);
+}
+
+/* ── NAV ── */
+.quiz-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* ── RESULTS ── */
+#result-section {
+    display: none;
+    padding: 40px 0 80px;
+    animation: fadeInUp 0.4s ease;
+}
+
+.result-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.result-header h2 {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+}
+
+.result-header p {
+    font-size: 15px;
+    color: var(--text-secondary);
+}
+
+.career-card {
+    background: var(--bg-glass);
+    backdrop-filter: var(--blur);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.career-card:hover {
+    border-color: rgba(245, 166, 35, 0.2);
+    transform: translateY(-2px);
+}
+
+.career-card.top-match {
+    border-color: var(--accent);
+    background: var(--bg-glass-selected);
+    box-shadow: 0 8px 32px var(--accent-glow);
+}
+
+.career-rank {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+}
+
+.career-card.top-match .career-rank {
+    color: var(--accent);
+}
+
+.career-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.career-name {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.career-match {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: -1px;
+}
+
+.career-why {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.career-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.skill-tag {
+    background: var(--bg-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.career-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.roadmap-btn {
+    background: var(--accent);
+    color: #000;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.roadmap-btn:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+    color: #000;
+    text-decoration: none;
+}
+
+.coming-soon-btn {
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-sm);
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: not-allowed;
+    display: inline-block;
+}
+
+/* ── RETAKE ── */
+.retake-section {
+    text-align: center;
+    margin-top: 48px;
+    padding: 40px;
+    background: var(--bg-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius);
+}
+
+.retake-section h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.retake-section p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+.retake-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ── LIGHT MODE ── */
+.light .option {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.light .option:hover {
+    background: rgba(245, 166, 35, 0.08);
+}
+
+.light .option.selected {
+    background: var(--bg-glass-selected);
+}
+
+@media (max-width: 600px) {
+    .career-hero h1 { font-size: 26px; }
+    .question-text { font-size: 16px; }
+    .career-match { font-size: 22px; }
+}

@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}Career Fit Finder — Nitin Builds{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="/static/css/career.css">
+{% endblock %}
+
+{% block content %}
+
+    <section class="career-hero">
+        <div class="container">
+            <h1>Find your <span>perfect career</span> fit</h1>
+            <p>15 deep questions. Honest answers. Get your top 3 career matches with a personalised action plan — built for young Indians.</p>
+            <div class="hero-stats">
+                <div class="hero-stat">🧠 15 deep questions</div>
+                <div class="hero-stat">🎯 15 career paths analysed</div>
+                <div class="hero-stat">⚡ Takes 5 minutes</div>
+                <div class="hero-stat">🆓 Free forever</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz-section">
+        <div class="container">
+
+            <div class="progress-bar-wrap">
+                <div class="progress-track">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-text" id="progress-text">
+                    Question 1 of 15
+                </div>
+            </div>
+
+            <div id="question-container"></div>
+
+            <div class="quiz-nav">
+                <button class="btn-secondary"
+                        id="prev-btn"
+                        onclick="prevQuestion()"
+                        style="display:none; padding:12px 28px;
+                               border-radius:10px; font-size:15px;
+                               font-weight:700; cursor:pointer;
+                               background:transparent;
+                               color:var(--text-secondary);
+                               border:1px solid var(--border-glass);">
+                    Previous
+                </button>
+                <button class="btn-primary"
+                        id="next-btn"
+                        onclick="nextQuestion()"
+                        disabled>
+                    Next →
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="result-section">
+        <div class="container">
+            <div class="result-header">
+                <h2>Your career fit results 🎯</h2>
+                <p>Based on your answers — here are your top 3 matches</p>
+            </div>
+            <div id="results-container"></div>
+            <div class="retake-section">
+                <h3>Not satisfied with your results?</h3>
+                <p>Your answers shape the results. Try again with more honest answers for better accuracy.</p>
+                <div class="retake-buttons">
+                    <button class="btn-primary" onclick="retakeQuiz()">
+                        Retake Quiz
+                    </button>
+                    <a href="/" class="btn-secondary"
+                       style="text-decoration:none; display:inline-block;
+                              padding:12px 28px; border-radius:10px;
+                              font-size:15px; font-weight:700;
+                              color:var(--text-secondary);
+                              border:1px solid var(--border-glass);">
+                        Browse Roadmaps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/career.js"></script>
+{% endblock %}
